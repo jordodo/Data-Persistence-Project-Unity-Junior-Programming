@@ -26,7 +26,7 @@ public class MainManager : MonoBehaviour
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         ScoreText.text = $"Score : {MenuManager.Instance.currentName} : {m_Points}";
-        bestScoreText.text = $"Best Score : {MenuManager.Instance.highScoreName} : {MenuManager.Instance.highScore}";
+        bestScoreText.text = $"High Score : {MenuManager.Instance.highScoreName} : {MenuManager.Instance.highScore}";
         
         int[] pointCountArray = new [] {1,1,2,2,5,5};
         for (int i = 0; i < LineCount; ++i)
@@ -74,7 +74,7 @@ public class MainManager : MonoBehaviour
             MenuManager.Instance.highScore = m_Points;
             MenuManager.Instance.highScoreName = MenuManager.Instance.currentName;
 
-            bestScoreText.text = $"Best Score : {MenuManager.Instance.highScoreName} : {MenuManager.Instance.highScore}";
+            bestScoreText.text = $"High Score : {MenuManager.Instance.highScoreName} : {MenuManager.Instance.highScore}";
             MenuManager.Instance.SaveHighScore();
         }
     }
